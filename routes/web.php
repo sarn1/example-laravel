@@ -11,6 +11,12 @@
 |
 */
 
-Route::get('/', function () {
+//protip: namespacing name like user.create
+
+Route::get('/', ['as' => 'home', function () {
+    return view('home');
+}]);
+
+Route::get('welcome', ['as' => 'welcome', function () {
     return view('welcome');
-});
+}]);
