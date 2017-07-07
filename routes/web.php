@@ -40,7 +40,10 @@ Route::post('contact', ['as' => 'contact.submit', function () {
     );
 
     if ($validation->passes()) {
-        dd('passed!!!');
+        // dd('passed!!!');
+        Mail::to('sphamorn@gmail.com')->send(new App\Mail\Contact(request()));
+        return view('success');
+
     }
 
     // for debugging
@@ -53,4 +56,8 @@ Route::post('contact', ['as' => 'contact.submit', function () {
     // the form gets to use "old" input from the session data.
     // see the form at contact.blade.php
     return redirect()->route('contact.form')->withErrors($validation->errors())->withInput();
+}]);
+
+Route::get('contact/success', ['as' => 'contact.success', function () {
+    return view('success');
 }]);
