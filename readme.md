@@ -86,6 +86,8 @@ If you check the php version, you'll see that it still showing you have an old v
 ### MailTrap.io
 Laravel has built in integration with [MailTrap.io](https://mailtrap.io/) for testing emails.  This is seen in the .env file.
 
+![MailTrap](https://github.com/sarn1/example-laravel/blob/master/doc/mailtrap.JPG)
+
 You can hae Laravel generate a mailable class for you so that you can extend it.  When you run the command below, it will create a Contact class that extends the Laravel Mailable class under the app > mail > contact.php in your directory.
 ```
 php artisan make:mail Contact
@@ -93,7 +95,7 @@ php artisan make:mail Contact
 ### Side Notes
 * Message bag and flash session data.
 https://github.com/sarn1/example-laravel/blob/master/routes/web.php#L50
-![GitHub Logo](https://github.com/sarn1/example-laravel/blob/master/doc/mailbag.png)
+![Message Bad](https://github.com/sarn1/example-laravel/blob/master/doc/mailbag.png)
 * Route names : https://github.com/sarn1/example-laravel/blob/master/routes/web.php#L16 / https://github.com/sarn1/example-laravel/blob/master/resources/views/template.blade.php#L32
 * Validation : https://github.com/sarn1/example-laravel/blob/master/routes/web.php#L33
 * Mailer code: https://github.com/sarn1/example-laravel/tree/master/app/Mail
