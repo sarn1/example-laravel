@@ -49,3 +49,45 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+
+## Other Notes
+* https://github.com/jasonlewis/build-your-first-laravel-site
+
+### Let's Begin
+Add Laravel into your project.
+```
+composer create-project laravel/laravel .
+```
+
+Serve your website using artisan.  Open your browser and goto http://localhost.com:8080 learn more [here](https://laravel.com/docs/4.2/artisan).
+```
+php artisan serve —port 8080
+```
+
+### Have An Old Version of PHP?
+You may have an old version of Laravel, if you do, you probably need to update your PHP engine.  You can check your version of PHP by running
+```
+php -v
+```
+and for Laravel:
+```
+php artisan --version
+```
+To update PHP run the following lines below.  [Learn more.](https://jason.pureconcepts.net/2016/09/upgrade-php-mac-os-x)
+```
+curl -s http://php-osx.liip.ch/install.sh | bash -s 7.1
+```
+Then you have to update the bash profile so that when you run things that need the PHP engine, it would run the updated PHP version.  You'll do this by running this command also in terminal.
+```
+echo ‘export PATH=/usr/local/php5/bin:$PATH’ >>~/.bash_profile
+```
+If you check the php version, you'll see that it still showing you have an old version of PHP.  So what you need to do is quit out of terminal and reopen it.  Then when you lookup your php version, the changes will then be reflected.
+
+### MailTrap.io
+Laravel has built in integration with [MailTrap.io](https://mailtrap.io/) for testing emails.  This is seen in the .env file.
+
+You can hae Laravel generate a mailable class for you so that you can extend it.  When you run the command below, it will create a Contact class that extends the Laravel Mailable class under the app > mail > contact.php in your directory.
+```
+php artisan make:mail Contact
+```
+
